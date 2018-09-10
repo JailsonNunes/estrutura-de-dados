@@ -6,16 +6,29 @@ public class Vetor {
 	private int totalDeAlunos = 0;
 
 	public void adiciona(Aluno aluno) {
+		alunos[this.totalDeAlunos]= aluno ;
+		totalDeAlunos++;
+		
 		// implementacao
 	}
 
 	public void adiciona(int posicao, Aluno aluno) {
+		 for(int i=this.totalDeAlunos; i>=posicao; i--){
+		      this.alunos[i]= this.alunos[i-1];
+		     }
+		      this.alunos[posicao] = aluno;
+		       this.totalDeAlunos++;
+		
 		// implementacao
 	}
 
 	public Aluno pega(int posicao) {
-		// implementacao
-		return null;
+		if(posicao >= this.totalDeAlunos || posicao < 0){
+		      throw new IllegalArgumentException("Posicao invalida");
+		    }
+		    return this.alunos[posicao];
+		   
+	
 	}
 
 	public void remove(int posicao) {

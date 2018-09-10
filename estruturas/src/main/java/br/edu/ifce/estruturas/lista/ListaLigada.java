@@ -8,11 +8,29 @@ public class ListaLigada {
 	private int totalDeElementos;
 	
 	public void adiciona(Object elemento) {
-		// implementacao
+	Celula nova = new Celula(elemento);
+	  	  
+	  if(this.totalDeElementos == 0) {
+		this.ultima = nova;
+		this.primeira = nova;
+		}else {
+			this.ultima.setProxima(nova);
+		}
+	  this.totalDeElementos++;
+		
 	}
 	
 	public void adiciona(int posicao, Object elemento) {
-		// implementacao
+	  Celula nova = new Celula(elemento);
+	  Celula atual = this.primeira;
+	  
+	  for(int i =1; i<posicao-1; i++) {
+		  atual.setProxima(atual);
+	  }
+	  	nova.setProxima(atual);
+	  	atual.setProxima(nova);
+
+		this.totalDeElementos++;
 	}
 	
 	public void adicionaNoComeco(Object elemento) {
@@ -35,11 +53,22 @@ public class ListaLigada {
 	}
 	
 	public void removeDoComeco() {
-		// implementacao
+		this.primeira = this.primeira.getProxima();
+		this.totalDeElementos--;
+		
+		if(this.totalDeElementos == 0) {
+			this.ultima = null;
+		}
 	}
 	
 	public void removeDoFim() {
-		// implementacao
+    	if(this.totalDeElementos == 1) {
+			this.removeDoComeco();
+		}
+		this.ultima = this.ultima.getAnterior();
+		this.ultima.setProxima(null);	
+		
+		this.totalDeElementos--;
 	}
 	
 	public int tamanho() {
