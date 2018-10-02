@@ -7,7 +7,7 @@ public class TesteContemAluno {
 		Aluno a1 = new Aluno();
 		Aluno a2 = new Aluno();
 		
-		a1.setNome("Jailson");
+		a1.setNome("Rafael");
 		a2.setNome("Paulo");
 		
 		Vetor lista = new Vetor();

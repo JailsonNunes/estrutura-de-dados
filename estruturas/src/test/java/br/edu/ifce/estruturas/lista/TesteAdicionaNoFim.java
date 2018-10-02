@@ -6,6 +6,7 @@ public class TesteAdicionaNoFim {
 		
 		lista.adiciona("Rafael");
 		lista.adiciona("Paulo");
+		lista.adiciona("Joao Victor");
 		
 		System.out.println(lista);
 	}

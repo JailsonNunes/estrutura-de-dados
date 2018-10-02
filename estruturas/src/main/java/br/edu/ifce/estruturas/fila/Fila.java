@@ -3,21 +3,22 @@ package br.edu.ifce.estruturas.fila;
 import java.util.LinkedList;
 import java.util.List;
 
-public class Fila<J> {
+
+public class Fila <E> {
 	
-	List<J> elementos = new LinkedList<J>();
-	private int totalDeElementos;
 	
-	public void adiciona(J x) {
-		 this.elementos.add(x);
-	}
-	public J remover() {
-		return ((LinkedList<J>) this.elementos).removeFirst();
 		
-	}
-	public boolean vazio() {
-		return this.elementos.size()==0;
+		List<E> aluno = new LinkedList<E>();
+		
+		public void inserir( E e) {
+			this.aluno.add(e);
+		}
+		public E remover() {
+			return ((LinkedList<E>) this.aluno).removeFirst();
+		}
+		public boolean vazio() {
+			return this.aluno.size()==0;
+		}
 	}
 
-	
-}
+
