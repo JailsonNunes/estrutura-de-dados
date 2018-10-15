@@ -19,6 +19,10 @@ public class Fila <E> {
 		public boolean vazio() {
 			return this.aluno.size()==0;
 		}
+		public void adiciona(String string) {
+			// TODO Auto-generated method stub
+			
+		}
 	}
 
 
